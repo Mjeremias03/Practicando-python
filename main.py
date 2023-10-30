@@ -47,7 +47,7 @@ def actualizar_usuario (id, nombre,email):
 
 #Eliminar Usuario
 def eliminar_usuario(id):
-       cursor.execute("DELETE usuario FROM usuarios WHERE id = ?", (id,))
+       cursor.execute("DELETE FROM usuarios WHERE id = ?", (id,))
        conn.commit()
     
        return "Usuario eliminado"

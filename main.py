@@ -29,6 +29,7 @@ def obtener_registro ():
             print(usuario)
 
         return usuario
+
 #Obtener usuario por id
 def obtener_usuario(id)->int:
         cursor.execute("SELECT id, nombre, email FROM usuarios WHERE id=?", (id,))
@@ -51,3 +52,5 @@ def eliminar_usuario(id):
        conn.commit()
     
        return "Usuario eliminado"
+
+print(obtener_registro)
